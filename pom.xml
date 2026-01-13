@@ -37,6 +37,17 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
@@ -70,19 +81,18 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- SQLite JDBC Driver -->
-	<dependency>
-		<groupId>org.xerial</groupId>
-		<artifactId>sqlite-jdbc</artifactId>
-		<version>3.45.2.0</version>
-	</dependency>
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.45.2.0</version>
+		</dependency>
 
-	<!-- SQLite Hibernate Dialect -->
-	<dependency>
-		<groupId>org.hibernate.orm</groupId>
-		<artifactId>hibernate-community-dialects</artifactId>
-	</dependency>
+		<!-- SQLite Hibernate Dialect -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-community-dialects</artifactId>
+		</dependency>
 	</dependencies>
-	
 
 
 	<build>
