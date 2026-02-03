@@ -2,18 +2,11 @@ package com.accenture.onboarding.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "task_comments")
-@Data
-@NoArgsConstructor
 public class TaskCommentEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,7 +22,69 @@ public class TaskCommentEntity {
     @Column(name = "createdBy")
     private String createdBy;
 
+    @Column(name = "updatedBy")
+    private String updatedBy;
+
     @Column(name = "createdOn", updatable = false)
-    @CreationTimestamp
     private LocalDateTime createdOn;
+
+    @Column(name = "updatedOn")
+    private LocalDateTime updatedOn;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public EmployeeTaskEntity getEmployeeTask() {
+		return employeeTask;
+	}
+
+	public void setEmployeeTask(EmployeeTaskEntity employeeTask) {
+		this.employeeTask = employeeTask;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public String getUpdatedBy() {
+		return updatedBy;
+	}
+
+	public void setUpdatedBy(String updatedBy) {
+		this.updatedBy = updatedBy;
+	}
+
+	public LocalDateTime getCreatedOn() {
+		return createdOn;
+	}
+
+	public void setCreatedOn(LocalDateTime createdOn) {
+		this.createdOn = createdOn;
+	}
+
+	public LocalDateTime getUpdatedOn() {
+		return updatedOn;
+	}
+
+	public void setUpdatedOn(LocalDateTime updatedOn) {
+		this.updatedOn = updatedOn;
+	}
+
 }
